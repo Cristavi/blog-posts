@@ -1,0 +1,19 @@
+{
+    "name": "asus/blogpost",
+    "description": "A simple website for posting and interacting with blogs",
+    "require-dev": {
+        "orchestra/testbench": "^6.23"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "asus\\blogpost\\" : "src/"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "asus\\blogpost\\" : "tests/"
+        }
+    }
+}
