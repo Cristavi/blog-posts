@@ -37,12 +37,10 @@ class Comment_controller extends Controller
         return back();
     }
 
-    public function single(Comments $comments){
-
-
+    public function single($_id){
 
         return view('comments.single', [
-            'comment' => $comments
+            'comment' => Comments::where('_id', '=', $_id)->first()
         ]);
     }
 

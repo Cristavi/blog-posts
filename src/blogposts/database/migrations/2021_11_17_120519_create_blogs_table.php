@@ -14,7 +14,7 @@ class CreateBlogsTable extends Migration
     public function up()
     {
         Schema::create('blogs', function (Blueprint $table) {
-            $table->id();
+
             $table->string('body');
             $table->string('content_image');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');

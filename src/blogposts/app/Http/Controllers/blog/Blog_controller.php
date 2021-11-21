@@ -53,8 +53,6 @@ class Blog_controller extends Controller
 
     public function single(Blogs $blogs){
 
-
-
         return view('blogs.single', [
             'blog' => $blogs
         ]);

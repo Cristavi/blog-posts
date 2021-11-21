@@ -43,13 +43,13 @@ Route::post('/likes/{blogs}', [Like_controller::class, 'store'])->name('like');
 Route::delete('/likes/{blogs}', [Like_controller::class, 'destroy'])->name('unlike');
 
 Route::post('/comment/{blogs}', [Comment_controller::class, 'store'])->name('comment');
-Route::delete('/comment/{comments:id}', [Comment_controller::class, 'destroy'])->name('comment.destroy');
-Route::get('/comment/{comments:id}', [Comment_controller::class, 'single']);
-Route::put('/comment/{comments:id}', [Comment_controller::class, 'update']);
+Route::delete('/comment/{comments:_id}', [Comment_controller::class, 'destroy'])->name('comment.destroy');
+Route::get('/comment/{comments:_id}', [Comment_controller::class, 'single']);
+Route::put('/comment/{comments:_id}', [Comment_controller::class, 'update']);
 
 Route::get('/{user:username}', [UserProfile_controller::class, 'index'])->name('user.profile');
 
 Route::get('/profile/edit/{user:username}', [User_controller::class, 'index'])->name('myProfile');
-Route::put('/profile/edit/{user:id}', [User_controller::class, 'update'])->name('myProfile.update');
+Route::put('/profile/edit/{user:_id}', [User_controller::class, 'update'])->name('myProfile.update');
 
 
